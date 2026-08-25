@@ -1,5 +1,3 @@
-umpy`
-
 ## Exercise 3.1
 
 * Create a function tthat takes any list of numbers (floats/ints) and returns the median.

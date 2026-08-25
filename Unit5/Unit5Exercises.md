@@ -22,11 +22,6 @@ For all the following exercises, you should be considering as many boundary case
 * Create a class method that is used to show the difference between a class and an instance
   * This should actually demonstrate the difference with the methods.
 
-## Exercise 4.3
-
-* Create a sum function that handles an undefined number of inputs
-  * This should be able to handle `int`, `float`, and complex numbers.
-
 ## Exercise 5.4
 
 * Design a class that inherits from the 3D point class but adds a mass attribute to the "child class"

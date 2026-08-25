@@ -1,6 +1,6 @@
 # Unit 6: Auxiliary Packages: Matplotlib, Numpy, Pandas, and Seaborn
 
-We're finally going to use some different packages beyond native Python so you're familiar with some of the more useful tools that we use in our day to day. You are allowed to install/use the Python packages `pandas`, `numpy`, `matplotlib`, and `seaborn`. 
+We're finally going to use some different packages beyond native Python so you're familiar with some of the more useful tools that we use in our day to day. You are allowed to install/use the Python packages `pandas`, `numpy`, `matplotlib`, and `seaborn`.
 
 Here is a list of questions/comments you should be able to answer:
 
@@ -25,7 +25,7 @@ Here is a list of questions/comments you should be able to answer:
 * What is `pandas` and why do we use it?
 * How do I read in an excell sheet? How do I read in a csv file?
 * What is the difference between `.loc`and `.iloc`?
-* What is the `isin` function useful for? 
+* What is the `isin` function useful for?
 
 ### Seaborn
 
@@ -33,7 +33,6 @@ Here is a list of questions/comments you should be able to answer:
 * How is seaborn related to matplotlib?
 * Why use seaborn?
 * What is a violin plot and what is it attempting to represent?
-* 
 
 ## Note for Exercises:
 
