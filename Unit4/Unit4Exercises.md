@@ -6,7 +6,7 @@ For all the following exercises, you should be considering as many boundary case
   * For example, you could do something like organize a list alphabetically based on the 2nd letter of their name.
   * This function should be able to handle a list like this:
     * ['Matthew', 'Tatsuto', 'Dongchen', 'Tony', 'Blake', 'Elena', 'Shangheng', "Margherita', 'Matt', 'Jim', 'Nick', 'Jacob', 'Roberto', 'Felix', 'Michela', 'Yuki', 'Behrad', 'Sateesh']
-  * Once you have done this with native python, see if you can do something similar leveraging `np.vectorize` and `np.argsort`
+  
 
 ## Exercise 4.2
 
@@ -24,7 +24,7 @@ For all the following exercises, you should be considering as many boundary case
 * Create a type-annotated function that computes the distances between two 3D points
   * All arguments should have type annotations, and you should be able to handle "Euclidean" and "Spherical" coordinates
 
-## Exercise 4.5 
+## Exercise 4.5
 
 * Create a function thyat takes a mandatory first and last name, but also an undefined number of keyword arguments (i.e. age, occupation, and location), and returns a dictionary
   * This should raise errors when unexpected types appear in the dictionary (i.e. `occupation` should not be 2)
