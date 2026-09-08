@@ -26,5 +26,5 @@ except Exception:
 
 
 
-#write a couple more tests yourself to test your code:
+#write a couple more tests yourself to test your code(call your function with some input(s) to see if the output(s) is correct):
 #for example, try different radius
