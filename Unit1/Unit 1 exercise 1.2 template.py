@@ -1,9 +1,18 @@
+
+"""
+Exercise 1.2
+
+* Write a script that imports the `Area` function you created in **Exercise 1.1** and then use it to calculate the area of a circle radius 5.
+"""
+
+
+
 #imports (import anything you need for this question)
 from math import pi
 
 
 #calculate the area of a circle radius 5
-#your code here
+#your code here:
 
 
 #test for you output (do not edit this)
