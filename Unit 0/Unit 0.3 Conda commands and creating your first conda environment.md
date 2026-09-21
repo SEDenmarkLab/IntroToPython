@@ -1,4 +1,4 @@
-## Unit 0.3 Conda commands and creating your first conda environment
+## Conda commands and creating your first conda environment
 
 ### What is Conda？
 
