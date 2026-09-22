@@ -4,7 +4,6 @@
 
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It acts as an automated, highly reliable safety net for your codebase, recording not only what was changed, but who changed it, when, and why.
 
-
 ### Why Do You Need It?
 
 * **Time Travel & Rollbacks:** If a recent update breaks your project, you can instantly revert back to a known stable version without manual file backups (main_v1_final_really_final.py).
@@ -12,13 +11,11 @@ Version control is a system that records changes to a file or set of files over 
 * **Concurrent Collaboration:** Multiple team members can work on different parts of the same project simultaneously. Version control manages merging and detects overlapping edits (merge conflicts).
 * **Safe Experimentation:** Branches let you isolate feature development, exploratory testing, or bug fixes without risking your primary, production-ready code.
 
-
 ### Git vs. GitHub
 
 **Git:** The distributed version control tool running locally on your computer. It tracks your files and project history offline.
 
 **GitHub:** A cloud-based hosting platform for Git repositories. It provides remote storage, team collaboration tools (Pull Requests, Code Reviews, Issue Tracking), and CI/CD pipelines.
-
 
 ### Essential Git Commands
 
@@ -93,10 +90,9 @@ git fetch origin
 git push -u origin feature/model-training
 ```
 
-
 ### Essential Github CLI Commands
 
-Remember that these are the commands that used to connect or do any operations between your local offline repository and the cloud remote repository(there's only works after downloading Github CLI, which is not required, but it is a very useful)
+Remember that these are the commands that used to connect or do any operations between your local offline repository and the cloud remote repository**(these only works after downloading Github CLI, which is not required, but it is a very useful)**
 
 ```Shell
 
@@ -150,7 +146,6 @@ gh pr merge 12 --rebase
 # Close an abandoned PR without merging
 gh pr close 12
 ```
-
 
 ### Understanding Key Concepts: Clone vs. Fork vs. Template vs. Branch vs. Pull Request
 
