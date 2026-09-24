@@ -14,3 +14,11 @@ For all the following exercises, you should be considering as many boundary case
 ## Exercise 6.3
 
 * Create a violin plot representing the different types of alkenes within the file [SADExample.csv](./SADExample.csv)
+
+## Exercise 6.4 (refer back to 3.1)
+
+* After you accomplish exercise 3.1, you are now allowed to download/use `numpy`, and attempt to do what you did in 3.1 within a single line.
+
+## Exercise 6.5 (refer back to 4.1)
+
+* Once you have done exercise 4.1 with native python, see if you can do something similar using `numpy` leveraging `np.vectorize` and `np.argsort`

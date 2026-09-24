@@ -1,8 +1,7 @@
 ## Exercise 3.1
 
 * Create a function tthat takes any list of numbers (floats/ints) and returns the median.
-  * Once you accomplish this, you are allowed to download/use `numpy`, and attempt to do this within a single line. Feel free to jump into [Unit 6](../Unit6/Unit6Q.md) for additional questions regarding auxilary packages that may be useful regarding
-    * You are free to reorganize/sort the list in a single line before you do this.
+  * You are free to reorganize/sort the list in a single line before you do this.
 
 ## Exercise 3.2
 
