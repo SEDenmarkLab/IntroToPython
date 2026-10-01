@@ -146,3 +146,13 @@ Packages like molli (molecular manipulation toolkit) and py3DMol (WebGL-based mo
 ```Shell
 pip install molli py3Dmol
 ```
+
+Note: If you have `uv`  installed, you can replace `pip install` with `uv pip install molli py3Dmol` for significantly faster resolution and download speeds.
+
+To see if `uv`is installed, type the following command:
+
+```Shell
+uv --version
+```
+
+If not installed, follow the instruction in [docs.astral.sh/uv/getting-started/installation](https://docs.astral.sh/uv/getting-started/installation/) to install.

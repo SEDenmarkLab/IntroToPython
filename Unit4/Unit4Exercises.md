@@ -5,8 +5,7 @@ For all the following exercises, you should be considering as many boundary case
 * Use a lambda function to sort a list of strings with a custom sorting rule
   * For example, you could do something like organize a list alphabetically based on the 2nd letter of their name.
   * This function should be able to handle a list like this:
-    * ['Matthew', 'Tatsuto', 'Dongchen', 'Tony', 'Blake', 'Elena', 'Shangheng', "Margherita', 'Matt', 'Jim', 'Nick', 'Jacob', 'Roberto', 'Felix', 'Michela', 'Yuki', 'Behrad', 'Sateesh']
-  
+    * ["Matthew", "Dongchen", "Blake", "Shangheng", "Felix", "Nick", "Yuki"]
 
 ## Exercise 4.2
 
