@@ -1,6 +1,6 @@
 ## Exercise 3.1
 
-* Create a function tthat takes any list of numbers (floats/ints) and returns the median.
+* Create a function that takes any list of numbers (floats/ints) and returns the median.
   * You are free to reorganize/sort the list in a single line before you do this.
 
 ## Exercise 3.2

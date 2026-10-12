@@ -1,3 +1,5 @@
+Connected to remote.server.com.
+
 # The command line
 
 Before we get into the general set up,  we are going to go over several useful commands that helps you to interact with your device through the terminal window.  The Command Line Interface (CLI) is a text-based bridge between you and your operating system/device. Usually, we will interact with graphical interface on our device to perform several actions that we want our device to do, such as clicking the folder icon to get into a specific folder. However, when it comes to coding, instead of navigating with a mouse through a Graphical User Interface (GUI), you type structured instructions to inspect files, execute scripts, and configure machines with speed and precision.
@@ -23,7 +25,7 @@ The host name is "localHost"
 
 Current working directory is "~" (user's home directory)
 
-% is the cursor, you might also see $ in Windows system
+% is the cursor, you might also see \$ in Windows system. The % (commonly in macOS zsh) or $ (commonly in Linux / Windows bash) indicates the terminal prompt, showing that the terminal is ready for input. Do not include % or $ when typing or copying the commands.
 
 command: The executable program (e.g., ls, grep, mkdir).
 
@@ -62,6 +64,19 @@ Move up one directory level, return home, or jump back to the previous folder:
 [user@localHost] ~/workspace % cd -       #Switch back to previous directory
 ```
 
+### Directory symbols
+
+You might be confused about what is "~", "..", "./", etc when you cd into different folders, and these are actually just symbols for folders. There is nothing more than that.
+
+| **Symbol**  | **Name**              | **Meaning**                                                                      | **Equivalent**                             | **Example Command** |
+| ----------------- | --------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------- |
+| `/`             | **Root Directory**    | The topmost level of the entire filesystem hierarchy (the root of the directory tree). | Similar to`C:\`in Windows; base of everything. | `cd /`                  |
+| `~`             | **Home Directory**    | The personal workspace and primary folder for the currently logged-in user.            | Similar to`C:\Users\username\`in Windows.      | `cd ~`                  |
+| `./`(or`.`)   | **Current Directory** | The directory you are currently standing in and working from.                          | "Right here" in the active folder.               | `./run_script.sh`       |
+| `../`(or`..`) | **Parent Directory**  | The folder located directly one level up from your current location.                   | "Step back one level up".                        | `cd ..`                 |
+
+
+
 #### 2. File and Directory Management
 
 | **Command** | **Description**                    | **Common Usage**         |
@@ -80,7 +95,7 @@ Create nested directories without throwing missing-parent errors:
 [user@localHost] ~/workspace % mkdir -p data/raw/2026
 ```
 
-Copy a directory recursively:
+Copy a directory recursively (In computer science, recursion refers to a process that repeats itself on nested sub-items. For here it means the folder itself along with all files and nested subdirectories inside it also gets copied by repeating the exact same copying proces, only typing "cp" without adding "-r" can only copy a single file):
 
 ```Shell
 [user@localHost] ~/workspace % cp -r experiments/ experiments_backup/
@@ -148,6 +163,12 @@ Find all `.log` files modified within the last 7 days:
 
 Unix-like shells operate on three default I/O streams:  **Standard Input (stdin)** ,  **Standard Output (stdout)** , and  **Standard Error (stderr)** .
 
+An **I/O stream** , stands for Input/Output stream, is a continuous flow of text data passing into or out of a program like a data pipeline connecting your running command to the keyboard, the screen, or a file. For example, you can imagine an input stream being a "stream" of words flowing into a file, and an output stream being a "stream" of word flowing out from the file.
+
+* **Standard Input (`stdin` ):** The data flowing *into* the command.
+* **Standard Output (`stdout` ):** Normal output text emitted *from* the command.
+* **Standard Error (`stderr`):** Diagnostic and error messages produced by the command.
+
 | **Operator** | **Action**                                | **Example**                       |
 | ------------------ | ----------------------------------------------- | --------------------------------------- |
 | `>`              | Redirect stdout to file (overwrite)             | `echo "token=123" > .env`             |
@@ -168,6 +189,8 @@ Sort an unsorted file and strip duplicates into a clean target file:
 ```Shell
 [user@localHost] ~ % sort -u raw_ids.txt > unique_ids.txt
 ```
+
+The output of "sort -u raw_ids.txt" flows into "unique_ids.txt".
 
 #### 6. Process Monitoring and System Diagnostics
 
@@ -258,13 +281,14 @@ Set standard restrictive permissions on private SSH keys:
 
 #### 8. Remote Access and Networking
 
-| **Command** | **Description**                              | **Common Usage**                                                   |
-| ----------------- | -------------------------------------------------- | ------------------------------------------------------------------------ |
-| `ssh`           | Secure Shell: Connect to a remote host securely    | `ssh user@host`                                                        |
-| `scp`           | Secure Copy: Transfer files over an SSH tunnel     | `scp file.txt user@host:path/`                                         |
-| `rsync`         | Efficient, differential remote and local file sync | `rsync -avz src/ user@host:dest/`                                      |
-| `curl`          | Transfer data to/from servers via HTTP/HTTPS/FTP   | `curl -O [https://example.com/data.csv](https://example.com/data.csv)` |
-| `ping`          | Test network reachability and latency to a host    | `ping google.com`                                                      |
+| **Command** | **Description**                                                     | **Common Usage**                                                   |
+| ----------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `ssh`           | Secure Shell: Connect to a remote host securely                           | `ssh user@host`                                                        |
+| `scp`           | Secure Copy: Transfer files over an SSH tunnel                            | `scp file.txt user@host:path/`                                         |
+| `sftp`          | Secure File Transfer Protocol: Interactive file transfer session over SSH | `sftp user@host`                                                       |
+| `rsync`         | Efficient, differential remote and local file sync                        | `rsync -avz src/ user@host:dest/`                                      |
+| `curl`          | Transfer data to/from servers via HTTP/HTTPS/FTP                          | `curl -O [https://example.com/data.csv](https://example.com/data.csv)` |
+| `ping`          | Test network reachability and latency to a host                           | `ping google.com`                                                      |
 
 ### Concrete Examples
 
@@ -280,6 +304,20 @@ Upload a local file or download a remote directory recursively:
 ```Shell
 [user@localHost] ~ % scp dataset.csv username@remote.server.com:~/data/
 [user@localHost] ~ % scp -r username@remote.server.com:~/results/ ./local_results/
+```
+
+Start an interactive SFTP session to navigate and transfer files over SSH:
+
+```Shell
+[user@localHost] ~ % sftp username@remote.server.com
+#after this, you will see something like:
+Connected to remote.server.com.
+#and the command prompt/cursor will turn to:
+sftp>
+#here are some useful commands you can do after connecting:
+sftp> get remote_file.txt          # Download file to local machine
+sftp> put local_file.txt           # Upload file to remote server
+sftp> bye                          # Terminate the SFTP session
 ```
 
 Synchronize directories incrementally with compression and progress tracking:
@@ -300,17 +338,6 @@ Send 4 packets to test server latency and packet loss:
 ```Shell
 [user@localHost] ~ % ping -c 4 8.8.8.8
 ```
-
-### Directory symbols
-
-You might be confused about what is "~", "..", "./", etc when you cd into different folders, and these are actually just symbols for folders. There is nothing more than that.
-
-| **Symbol**  | **Name**              | **Meaning**                                                                      | **Equivalent**                             | **Example Command** |
-| ----------------- | --------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------- |
-| `/`             | **Root Directory**    | The topmost level of the entire filesystem hierarchy (the root of the directory tree). | Similar to`C:\`in Windows; base of everything. | `cd /`                  |
-| `~`             | **Home Directory**    | The personal workspace and primary folder for the currently logged-in user.            | Similar to`C:\Users\username\`in Windows.      | `cd ~`                  |
-| `./`(or`.`)   | **Current Directory** | The directory you are currently standing in and working from.                          | "Right here" in the active folder.               | `./run_script.sh`       |
-| `../`(or`..`) | **Parent Directory**  | The folder located directly one level up from your current location.                   | "Step back one level up".                        | `cd ..`                 |
 
 ### What Are Commands Under the Hood?
 

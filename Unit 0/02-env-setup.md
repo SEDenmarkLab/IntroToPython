@@ -1,5 +1,3 @@
-
-
 # General Environment setup (installation)
 
 This document will focus on the general installations and account creation on your machine.
@@ -9,7 +7,7 @@ This document will focus on the general installations and account creation on yo
 Github is where developers upload there code and repositories to the cloud/internet to keep track of their progess. While Git tracks code changes locally on your machine, GitHub acts as the remote hub where code is backed up, shared, and collaborated on with others.
 
 1. Navigate your browser to [github.com](https://github.com/)
-2. follow their steps to signup.
+2. Follow their steps to signup.
 
 ### 2. Installing Git
 
@@ -30,16 +28,15 @@ For more, reference to [git-scm.com/install/mac](https://git-scm.com/install/mac
 
 #### Windows
 
-#### * Go to [git-scm.com/install/windows](https://git-scm.com/install/windows)
-* follow their steps to install.
+1. Go to [git-scm.com/install/windows](https://git-scm.com/install/windows)
+2. Follow their steps to install.
 
 #### Linux
 
 1. Go to [git-scm.com/install/linux](https://git-scm.com/install/linux)
-2. follow their steps to install
+2. Follow their steps to install
 
 Go to [git-scm.com/install](https://git-scm.com/install/) for reference
-
 
 #### Verification
 
@@ -51,33 +48,27 @@ git --version
 
 If you see the version printed out, you are all set. (something like git version 2.x.x)
 
-
 ### 3. Installing VS Code and Login with Github
 
 VS Code is a lightweight, cross-platform source code editor/Integrated Development Environment(IDE) built by Microsoft. It features built-in Git tooling, integrated terminals, debugging support, and an ecosystem of extensions for virtually any programming language. ([code.visualstudio.com](https://code.visualstudio.com/))
 
-
 #### macOS
 
 1. Go to [code.visualstudio.com/docs/setup/mac](https://code.visualstudio.com/docs/setup/mac)
-2. follow their steps to install
+2. Follow their steps to install
 3. Usually, they will lead you to [code.visualstudio.com/download](https://code.visualstudio.com/download)
-
-
 
 #### Windows
 
 1. Go to [code.visualstudio.com/docs/setup/windows](https://code.visualstudio.com/docs/setup/windows)
-2. follow their steps to install
+2. Follow their steps to install
 3. Usually, they will lead you to [code.visualstudio.com/download](https://code.visualstudio.com/download)
-
 
 #### Linux
 
 1. Go to [code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
-2. follow their steps to install
+2. Follow their steps to install
 3. Usually, they will lead you to [code.visualstudio.com/download](https://code.visualstudio.com/download)
-
 
 #### Login using your Github account
 
@@ -86,16 +77,18 @@ VS Code is a lightweight, cross-platform source code editor/Integrated Developme
 3. Click on that icon and choose "Sign in with GitHub".
 4. Follow rest of the steps they provided
 
-
 #### Downloading some VS Code extensions
 
 1. Navigate to the extension category located at the side bar to the left.
-2. Search for "Python"(provide you with some Python debuggers), "Jupyter"(allow you to use Jupyter notebook in VS code), "autoDocstring - Python Docstring Generator"(generate Docstring templates) extension packs. Note: The Jupyter notebook here it's quite important because this entire exercise template files(ends in .ipynb) are based upon this package, this package allows you to execute your Python code by different separate blocks. However, you might wonder the reason why unit one is not using Jupyter notebook, this is actually because you will be learning how to do imports, and you cannot import a .ipynb file to another file. You could only do it with a native python file. However, you could import other native Python files to a .ipynb file, as you will see you later.
+2. Search for and install the following extensions:
+   * **Python**: Provides rich support for Python, including code completion, linting, and debugging capabilities.
+   * **autoDocstring - Python Docstring Generator**: Quickly generates Python docstring templates automatically.
+   * **Jupyter**: Enables full Jupyter Notebook (`.ipynb`) support directly inside VS Code.
+     * **Importance**: The exercise templates for this course (files ending in `.ipynb`) rely on this package, allowing you to run code sequentially in isolated blocks (cells).
+     * **Note on Unit 1**: You might wonder why Unit 1 does not use Jupyter notebooks. This is because Unit 1 teaches native Python `import` statements, and you cannot directly import a `.ipynb` file into another script like a standard `.py` file. However, you can import standard `.py` files into a `.ipynb` notebook, as you will see in later exercises.
 3. Download these them sequentially
 
-
-
-### 4. Installing Miniconda (future guidance on what that is and how to use it will be on Unit 0.3)
+### 4. Installing Miniconda (future guidance on what that is and how to use it will be on [Unit 0.3](03-conda.md))
 
 Miniconda is a minimal, lightweight distribution of Conda that includes only Python, Conda package manager, and a few core dependencies. It lets you create isolated virtual environments with specific Python versions and native C/C++ libraries, preventing project dependency conflicts and keeping your base operating system clean.
 

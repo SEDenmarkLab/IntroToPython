@@ -17,10 +17,10 @@ from math import pi
 
 #test for you output (do not edit this)
 try:
-    if area(5) == pi * 5 * 5:
-        print("Great! You have the correct output. The correct out put is -3.14159")
+    if area(5) == (test := pi*5*5):
+        print(f"Great! You have the correct output. The correct out put is {test:.3f}")
     else:
-        print(f"Your output is: {area(5)}, the correct answer is -3.1416, please try again")
+        print(f"Your output is: {area(5)}, the correct answer is {test:.3f}, please try again")
 except Exception:
     print("if this line appears, you probably didn't import correctly")
 
